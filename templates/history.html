@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeding History</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html">History</a>
+    </nav>
+
+    <h2>History Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>History ID</th>
+                <th>Created At</th>
+                <th>Schedule ID</th>
+                <th>Module ID</th>
+                <th>Feed Time</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="historyTableBody">
+            <tr>
+                <td colspan="8">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="/static/scripts/history.js"></script>
+</body>
+</html>

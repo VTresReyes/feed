@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Feeder Modules</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/module.css">
+</head>
+<body>
+
+     <nav>
+        <a href="/">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html">History</a>
+    </nav>
+
+    <form id="moduleForm">
+        <label>Module ID:</label>
+        <input type="text" id="module_id" required><br><br>
+
+        <label>Camera ID:</label>
+        <input type="text" id="cam_id"><br><br>
+
+        <label>Status:</label>
+        <select id="status" class="status-select">
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select><br><br>
+
+        <input type="hidden" id="weight" value="0">
+
+        <button type="button" onclick="addModule()">Add Module</button>
+    </form>
+
+    <hr>
+    <h3>Module Data</h3>
+    <button id="toggleRefresh" onclick="manualRefresh()" class="refresh">Refresh Data</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Module ID</th>
+                <th>Camera ID</th>
+                <th>Status</th>
+                <th>Weight</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="moduleTableBody">
+            <tr><td colspan="5">Loading...</td></tr>
+        </tbody>
+    </table>
+
+    <script src="/static/scripts/module.js"></script>
+</body>
+</html>

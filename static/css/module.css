@@ -1,0 +1,216 @@
+
+/* Form Styling */
+#moduleForm {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(255, 137, 0, 0.2);
+    max-width: 100%;
+}
+
+#moduleForm label {
+    display: inline-block;
+    width: 150px;
+    font-weight: 700;
+    color: #2c2c2c;
+    font-size: 20px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#moduleForm input {
+    padding: 12px 16px;
+    border: 2px solid #FFAA6E;
+    border-radius: 8px;
+    font-size: 16px;
+    width: calc(100% - 170px);
+    margin-bottom: 25px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+#moduleForm input:focus {
+    outline: none;
+    border-color: #FF5900;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 137, 0, 0.1);
+}
+
+#moduleForm select {
+    padding: 12px 16px;
+    border: 2px solid #FFAA6E;
+    border-radius: 8px;
+    font-size: 16px;
+    width: calc(100% - 170px);
+    margin-bottom: 25px;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#moduleForm select:focus {
+    outline: none;
+    border-color: #FF5900;
+    box-shadow: 0 0 0 3px rgba(255, 137, 0, 0.1);
+}
+
+#moduleForm button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: #FF8237;
+    border: 2px solid #FF5900;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 137, 0, 0.3);
+}
+
+#moduleForm button:hover {
+    background-color: #FF5900;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 137, 0, 0.4);
+}
+
+#moduleForm button:active {
+    transform: translateY(0);
+}
+
+/* Section Divider */
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+/* Module Data Section */
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* Auto-Refresh Toggle Button */
+#toggleRefresh {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid #FF8237;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+}
+
+#toggleRefresh:hover {
+    background-color: #FFFBDC;
+    border-color: #FF5900;
+}
+
+#toggleRefresh.refresh-active {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+/* Action Buttons */
+.btn-edit,
+.btn-delete {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid #FF8237;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #2c2c2c;
+    width: calc(50% - 15px);
+    display: inline-block;
+}
+
+.btn-delete {
+    margin-right: 0;
+}
+
+.btn-edit:hover {
+    background-color: #FFD3A5;
+    border-color: #FF5900;
+    color: #2c2c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(255, 137, 0, 0.3);
+}
+
+.btn-delete:hover {
+    background-color: #FF8237;
+    border-color: #FF5900;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(255, 137, 0, 0.3);
+}
+
+/* Edit Mode Table Cells */
+tbody td input[type="text"],
+tbody td input[type="number"] {
+    padding: 8px 12px;
+    border: 2px solid #FFAA6E;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+tbody td input[type="text"]:focus,
+tbody td input[type="number"]:focus {
+    outline: none;
+    border-color: #FF5900;
+    box-shadow: 0 0 0 3px rgba(255, 137, 0, 0.1);
+}
+
+/* Save and Cancel Buttons */
+/* Save and Cancel Buttons */
+.btn-save,
+.btn-cancel {
+    padding: 8px 18px;
+    margin-right: 10px;
+    border: 2px solid #FF8237;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #2c2c2c;
+    width: calc(50% - 15px);
+    display: inline-block;
+}
+
+.btn-cancel {
+    margin-right: 0;
+}
+
+.btn-save:hover {
+    background-color: #4caf50;
+    border-color: #388e3c;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cancel:hover {
+    background-color: #f44336;
+    border-color: #d32f2f;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(244, 67, 54, 0.3);
+}

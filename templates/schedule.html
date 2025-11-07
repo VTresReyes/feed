@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Management</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/schedule.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/module.html">Modules</a> |
+        <a href="/schedule.html">Schedules</a> |
+        <a href="/history.html">History</a>
+    </nav>
+
+    <h2>Schedules List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Module ID</th>
+                <th>Feed Time</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="schedulesTable"></tbody>
+    </table>
+    
+    <script src="/static/scripts/schedule.js"></script>
+</body>
+</html>
