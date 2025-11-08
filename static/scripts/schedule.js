@@ -188,6 +188,42 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
+// Function to check and reset statuses daily
+function checkAndResetStatuses() {
+    const lastResetDate = localStorage.getItem('lastResetDate');
+    const today = new Date().toDateString();
+    
+    if (lastResetDate !== today) {
+        // It's a new day, reset all statuses to pending
+        fetch(`${API_URL}/schedules`)
+            .then(res => res.json())
+            .then(schedules => {
+                const resetPromises = schedules
+                    .filter(schedule => schedule.status !== 'pending')
+                    .map(schedule => 
+                        fetch(`${API_URL}/schedules/${schedule.schedule_id}`, {
+                            method: 'PUT',
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify({
+                                ...schedule,
+                                status: 'pending'
+                            })
+                        })
+                    );
+                
+                return Promise.all(resetPromises);
+            })
+            .then(() => {
+                localStorage.setItem('lastResetDate', today);
+                console.log('Daily status reset completed');
+                loadSchedules();
+            })
+            .catch(error => {
+                console.error('Error resetting statuses:', error);
+            });
+    }
+}
+
 // Add CSS for styling
 const style = document.createElement('style');
 style.textContent = `
@@ -281,9 +317,15 @@ document.head.appendChild(style);
 // Load schedules on page load
 loadSchedules();
 
+// Check for daily reset on page load
+checkAndResetStatuses();
+
 // Auto-refresh every 10 seconds (when not editing)
 setInterval(() => {
     if (!isEditing) {
         loadSchedules();
     }
 }, 10000);
+
+// Check for daily reset every minute
+setInterval(checkAndResetStatuses, 60000);
